@@ -8,12 +8,23 @@
 <body>
     
     <script>
-       var firstName = prompt("What's your first name?");
-       var lastName = prompt("What's your last name?");
-       alert(firstName + ' ' + lastName + ' is confirmed');
-       var birthYear = prompt("What's your birth year?");
-       var age = 2023-birthYear;
-       alert('Welcome ' + firstName + ' ' + lastName + ' You are ' + age + ' years old ');
+    do{
+        var firstName = prompt("What's your first name?");
+        var lastName = prompt("What's your last name?");
+        var confirmation = confirm("Is your full name: " + firstName + ' ' + lastName);
+        
+        if (confirmation === true) {
+         // If the user clicks "OK"
+           alert(firstName + ' ' + lastName + ' is confirmed');
+           var birthYear = prompt("What's your birth year?");
+           const currentYear = new Date().getFullYear();
+           const age = currentYear - birthYear;
+           alert('Welcome ' + firstName + ' ' + lastName + ' You are ' + age + ' years old ');
+           break
+       } 
+    }while(true);
+       
+       
 
        var message = "Thi is the first release of a calculator that only has a summation feature.";
        alert(message);
