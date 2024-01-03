@@ -1,19 +1,4 @@
 
-function newClock(clock) {
-
-    if (clock == 0)
-        return (12 + "AM");
-
-    else if (clock == 12)
-        return (12 + "PM");
-
-    else if (clock >= 1 && clock <= 11)
-        return (clock + "AM");
-
-    else
-        return (clock - 12 + "PM");
-}
-
 while (true) {
     let number = prompt("How many values you want to enter ?");
     let flag = 0;
