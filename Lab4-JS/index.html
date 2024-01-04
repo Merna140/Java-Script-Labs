@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Constructor function to create 'Person' 
+        function Person(fullName, money, sleepMood, healthRate) {
+            this.fullName = fullName;
+            this.money = money;
+            this.sleepMood = sleepMood;
+            this.healthRate = healthRate;
+
+            this.sleep = function (hours) {
+                if (hours == 7) {
+                    alert(this.fullName + " is Happy.")
+                    this.sleepMood = "Happy";
+                }
+                else if (hours < 7) {
+                    alert(this.fullName + " is Tired.")
+                    this.sleepMood = "Tired";
+                }
+                else {
+                    alert(this.fullName + " is Lazy.")
+                    this.sleepMood = "Lazy";
+                }
+            };
+
+            this.eat = function (meals) {
+                if (meals == 3) {
+                    alert(this.fullName + " health rate is 100.")
+                    this.healthRate = 100;
+                }
+                else if (meals == 2) {
+                    alert(this.fullName + " health rate is 75.")
+                    this.healthRate = 75;
+                }
+                else if (meals == 1) {
+                    alert(this.fullName + " health rate is 50.")
+                    this.healthRate = 50;
+                }
+                else {
+                    alert("Number of meals should be from 1 to 3")
+                }
+            };
+
+            this.buy = function (items) {
+                items = Number(items);
+                let amount = 10 * items;
+                this.money = this.money - amount;
+            };
+        }
+
+        // Define a class 'Person'
+        class Person {
+            constructor(fullName, money, sleepMood, healthRate) {
+                this.fullName = fullName;
+                this.money = money;
+                this.sleepMood = sleepMood;
+                this.healthRate = healthRate;
+            }
+
+            sleep(hours) {
+                if (hours == 7) {
+                    alert(this.fullName + " is Happy.")
+                    this.sleepMood = "Happy";
+                }
+                else if (hours < 7) {
+                    alert(this.fullName + " is Tired.")
+                    this.sleepMood = "Tired";
+                }
+                else {
+                    alert(this.fullName + " is Lazy.")
+                    this.sleepMood = "Lazy";
+                }
+            }
+
+            eat(meals) {
+                if (meals == 3) {
+                    alert(this.fullName + " health rate is 100.")
+                    this.healthRate = 100;
+                }
+                else if (meals == 2) {
+                    alert(this.fullName + " health rate is 75.")
+                    this.healthRate = 75;
+                }
+                else if (meals == 1) {
+                    alert(this.fullName + " health rate is 50.")
+                    this.healthRate = 50;
+                }
+                else {
+                    alert("Number of meals should be from 1 to 3")
+                }
+            }
+
+            buy(items) {
+                items = Number(items);
+                let amount = 10 * items;
+                this.money = this.money - amount;
+            }
+        }
+
+        // Object defining a 'Person'
+        const Person = {
+            init(fullName, money, sleepMood, healthRate) {
+                this.fullName = fullName;
+                this.money = money;
+                this.sleepMood = sleepMood;
+                this.healthRate = healthRate;
+                return this;
+            },
+
+            sleep(hours) {
+                if (hours == 7) {
+                    alert(this.fullName + " is Happy.")
+                    this.sleepMood = "Happy";
+                }
+                else if (hours < 7) {
+                    alert(this.fullName + " is Tired.")
+                    this.sleepMood = "Tired";
+                }
+                else {
+                    alert(this.fullName + " is Lazy.")
+                    this.sleepMood = "Lazy";
+                }
+            },
+
+            eat(meals) {
+                if (meals == 3) {
+                    alert(this.fullName + " health rate is 100.")
+                    this.healthRate = 100;
+                }
+                else if (meals == 2) {
+                    alert(this.fullName + " health rate is 75.")
+                    this.healthRate = 75;
+                }
+                else if (meals == 1) {
+                    alert(this.fullName + " health rate is 50.")
+                    this.healthRate = 50;
+                }
+                else {
+                    alert("Number of meals should be from 1 to 3")
+                }
+            },
+
+            buy(items) {
+                items = Number(items);
+                let amount = 10 * items;
+                this.money = this.money - amount;
+            }
+        };
+
+        // Factory function to create 'Person' objects
+        const createPerson = (fullName, money, sleepMood, healthRate) => {
+            return {
+                fullName,
+                money,
+                sleepMood,
+                healthRate,
+
+                sleep(hours) {
+                    if (hours == 7) {
+                        alert(this.fullName + " is Happy.")
+                        this.sleepMood = "Happy";
+                    }
+                    else if (hours < 7) {
+                        alert(this.fullName + " is Tired.")
+                        this.sleepMood = "Tired";
+                    }
+                    else {
+                        alert(this.fullName + " is Lazy.")
+                        this.sleepMood = "Lazy";
+                    }
+                },
+
+                eat(meals) {
+                    if (meals == 3) {
+                        alert(this.fullName + " health rate is 100.")
+                        this.healthRate = 100;
+                    }
+                    else if (meals == 2) {
+                        alert(this.fullName + " health rate is 75.")
+                        this.healthRate = 75;
+                    }
+                    else if (meals == 1) {
+                        alert(this.fullName + " health rate is 50.")
+                        this.healthRate = 50;
+                    }
+                    else {
+                        alert("Number of meals should be from 1 to 3")
+                    }
+                },
+
+                buy(items) {
+                    items = Number(items);
+                    let amount = 10 * items;
+                    this.money = this.money - amount;
+                }
+            };
+        };
+
+    </script>
+</body>
+
+</html>
