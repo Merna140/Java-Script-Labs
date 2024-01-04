@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    <script>
-    do{
-        var firstName = prompt("What's your first name?");
-        var lastName = prompt("What's your last name?");
-        var confirmation = confirm("Is your full name: " + firstName + ' ' + lastName);
-        
-        if (confirmation === true) {
-         // If the user clicks "OK"
-           alert(firstName + ' ' + lastName + ' is confirmed');
-           var birthYear = prompt("What's your birth year?");
-           const currentYear = new Date().getFullYear();
-           const age = currentYear - birthYear;
-           alert('Welcome ' + firstName + ' ' + lastName + ' You are ' + age + ' years old ');
-           break
-       } 
-    }while(true);
 
-       var message = "Thi is the first release of a calculator that only has a summation feature.";
-       alert(message);
-       var firstNum = prompt("Enter the 1st number");
-       var secondNum = prompt("Enter the 2nd number");
-       var sum = Number(firstNum) + Number(secondNum)
-       alert(' The summation result is ' + firstNum + ' + ' + secondNum + ' = ' + sum);
+<body>
+
+    <script>
+        do {
+            var firstName = prompt("What's your first name?");
+            var lastName = prompt("What's your last name?");
+
+            if (firstName === null || lastName === null) {
+                alert("User canceled.");
+                break;
+            }
+
+            var confirmation = confirm("Is your full name: " + firstName + ' ' + lastName);
+           
+            if (confirmation === true) {
+                // If the user clicks "OK"
+                alert(firstName + ' ' + lastName + ' is confirmed');
+                var birthYear = prompt("What's your birth year?");
+                const currentYear = new Date().getFullYear();
+                const age = currentYear - birthYear;
+                alert('Welcome ' + firstName + ' ' + lastName + ' You are ' + age + ' years old ');
+                break
+            }
+        } while (true);
+
+        var message = "This is the first release of a calculator that only has a summation feature.";
+        alert(message);
+
+        var firstNum = prompt("Enter the 1st number");
+        while (isNaN(firstNum) || firstNum === null || firstNum === "") {
+            alert("Invalid Input");
+            firstNum = prompt("Enter Contact Number.");
+        }
+
+        var secondNum = prompt("Enter the 2nd number");
+        while (isNaN(secondNum) || secondNum === null || secondNum === "") {
+            alert("Invalid Input");
+            secondNum = prompt("Enter Contact Number.");
+        }
+
+        var sum = Number(firstNum) + Number(secondNum)
+        alert(' The summation result is ' + firstNum + ' + ' + secondNum + ' = ' + sum);
     </script>
-    
+
 </body>
+
 </html>
