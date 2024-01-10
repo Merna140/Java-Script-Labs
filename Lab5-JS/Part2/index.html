@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Parent constructor function
+        function Vehicle(type) {
+            this.type = type;
+        }
+
+        // Method added to the prototype of Vehicle constructor
+        Vehicle.prototype.start = function () {
+            return 'The ' + this.type + ' starts.';
+        };
+
+        // Child constructor function inheriting from Vehicle
+        function Car(type, brand) {
+            Vehicle.call(this, type); // Call the Vehicle constructor within the Car constructor
+            this.brand = brand;
+        }
+
+        // Linking Car's prototype to Vehicle's prototype for inheritance
+        Car.prototype = Object.create(Vehicle.prototype);
+        Car.prototype.constructor = Car;
+
+        // Method specific to Car
+        Car.prototype.drive = function () {
+            return 'The ' + this.brand + ' ' + this.type + ' is driving.';
+        };
+
+        // Creating an instance of Car
+        const myCar = new Car('sedan', 'Toyota');
+
+        console.log(myCar.start()); // Output: The sedan starts.
+        console.log(myCar.drive()); // Output: The Toyota sedan is driving.
+    </script>
+</body>
+
+</html>
