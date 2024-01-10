@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Person {
+
+            #healthRate;
+            #sleepMood;
+
+            constructor(fullName, money) {
+                this.fullName = fullName;
+                this.money = money;
+            }
+
+            get healthRate() {
+                return this.#healthRate;
+            }
+
+            set healthRate(HR) {
+                if (HR > 100 || HR < 0) {
+                    alert("Health Rate must be between 0 and 100");
+                    this.#healthRate = 0;
+                }
+                else {
+                    this.#healthRate = HR;
+                }
+            }
+
+            sleep(hours) {
+                if (hours == 7) {
+                    this.sleepMood = "Happy";
+                }
+                else if (hours < 7) {
+                    this.sleepMood = "Tired";
+                }
+                else {
+                    this.sleepMood = "Lazy";
+                }
+            }
+
+            eat(meals) {
+                if (meals > 0 && meals < 4) {
+                    if (meals == 3) {
+                        this.healthRate = 100;
+                    }
+                    else if (meals == 2) {
+                        this.healthRate = 75;
+                    }
+                    else {
+                        this.healthRate = 50;
+                    }
+                }
+                else{
+                    alert("Meals should be between 0 and 3");
+                }
+
+            }
+
+            buy(items) {
+                items = Number(items);
+                let amount = 10 * items;
+                this.money = this.money - amount;
+            }
+        }
+
+        class Employee extends Person {
+            #salary
+            #workMood
+
+            constructor(fullName, money, id, email, isManager) {
+                super(fullName, money)
+                this.id = id;
+                this.email = email;
+                this.isManager = isManager;
+            }
+
+            get salary() {
+                return this.salary;
+            }
+
+            set salary(s) {
+                if (s < 1000) {
+                    alert('Salary cannot be less than 1000');
+                    this.salary = 1000;
+                }
+                else {
+                    this.salary = s;
+                }
+            }
+
+            work(hours) {
+                if (hours == 8) {
+                    this.workMood = "Happy";
+                }
+                else if (hours > 8) {
+                    this.workMood = "Tired";
+                }
+                else {
+                    this.workMood = "Lazy";
+                }
+            }
+        }
+
+        class Office {
+            constructor(name, employees) {
+                this.name = name;
+                this.employees = employees;
+            }
+
+            getAllEmployees() {
+                return this.employees;
+            }
+
+            getEmployee(empId) {
+                return this.employees.find(employee => employee.id === empId);
+            }
+
+            hire(Employee) {
+                this.employees.push(Employee);
+                alert("Employee is hired");
+            }
+
+            fire(Employee) {
+                this.employees = this.employees.filter(employee => employee.id !== Employee.id);
+                alert("Employee is fired");
+            }
+        }
+
+        let myArray = [];
+        let office1 = new Office("ITI", myArray);
+
+        while (true) {
+            let choice = prompt("Choose from the Menu \n 1)Add Employee. \n 2)Show Employees. \n 3)Search. \n 4)Delete Employee.");
+
+            if (choice === null) {
+                alert("User canceled.");
+                break;
+            }
+
+            else if (isNaN(choice) || choice == "") {
+                alert("It couldn't be string or null.");
+            }
+
+            else if (choice !== "1" && choice !== "2" && choice !== "3" && choice !== "4") {
+                alert("Choice not in the menu.");
+            }
+
+            else {
+                if (choice == "1") {
+                    let name = prompt("Enter Employee Name.");
+                    while (!isNaN(name) || name === null || name === "") {
+                        alert("Invalid Input");
+                        name = prompt("Enter Employee Name.");
+                    }
+
+                    let id = prompt("Enter Employee ID.");
+                    while (isNaN(id) || id === null || id === "") {
+                        alert("Invalid Input");
+                        id = prompt("Enter Employee ID.");
+                    }
+
+                    let mng = prompt("If manager press “mngr” \n If normal employee press “nrml”");
+                    while (mng != "mngr" && mng != "nrml") {
+                        alert("Invalid Input");
+                        mng = prompt("If manager press “mngr” \n If normal employee press “nrml”");
+                    }
+
+                    let salary = prompt("Enter Employee salary.");
+                    while (isNaN(salary) || salary === null || salary === "") {
+                        alert("Invalid Input");
+                        salary = prompt("Enter Employee salary.");
+                    }
+
+                    let hours = prompt("Enter Employee Working Hours.");
+                    while (isNaN(hours) || hours === null || hours === "") {
+                        alert("Invalid Input");
+                        hours = prompt("Enter Employee Working Hours.");
+                    }
+
+                    let email = prompt("Enter Employee Email.");
+                    const newEmp = new Employee(name, salary, id, email, mng);
+                    newEmp.work(hours);
+                    newEmp.sleep(8);
+                    newEmp.buy(5);
+                    newEmp.eat(2);
+                    office1.hire(newEmp);
+                }
+
+                else if (choice == "2") {
+                    let message = 'Employees:\n'; // Initial message
+                    let officeArray = office1.getAllEmployees();
+                    // Loop through the array and build the message
+                    officeArray.forEach((object, index) => {
+                        message += `Employee ${index + 1}: ID: ${object.id}, Name: ${object.fullName}\n`;
+                    });
+
+                    alert(message);
+                }
+
+                else if (choice == "3") {
+                    let searchInput = prompt("Enter Employee ID");
+                    let myEmp = office1.getEmployee(searchInput);
+                    if (myEmp) {
+                        alert("Your Employee Name is: " + myEmp.fullName + "\nYour Employee ID is: " + myEmp.id + "\nYour Employee is " + myEmp.isManager + "\nYour Employee email is " + myEmp.email + "\nYour Employee Mood According to his Working Hours is: " + myEmp.workMood + "\nYour Employee Mood According to his Sleep Hours is: " + myEmp.sleepMood + "\nYour Employee Health Rate According to his eating meals is: " + myEmp.healthRate + "\nYour Employee Money According to his purchases: " + myEmp.money);
+                    }
+                    else {
+                        alert("Not Found.");
+                    }
+                }
+
+                else {
+                    let searchInput = prompt("Enter Employee ID");
+                    let myEmp = office1.getEmployee(searchInput);
+                    if (myEmp) {
+                        office1.fire(myEmp);
+                    }
+                    else {
+                        alert("Not Found.");
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
