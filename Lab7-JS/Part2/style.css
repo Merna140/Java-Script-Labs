@@ -8,8 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: rgb(10, 177, 23);
     min-height: 100vh;
+    background-color: rgb(47, 233, 118);
 }
 
 .title{
@@ -20,8 +20,12 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    background-color: brown;
+    width: 600px;
+    background-color: gray;
+    border-radius: 7px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .task {
@@ -30,6 +34,8 @@ body {
     background-color: white;
     padding: 20px;
     margin: 5px;
+    border-radius: 7px;
+    width: 95%;
 }
 
 .taskManagement{
