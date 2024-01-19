@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(10, 177, 23);
+    min-height: 100vh;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background-color: brown;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    margin: 5px;
+}
+
+.taskManagement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    display: inline;
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#addBtn {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+    margin-left: 10px;
+}
+
+#btn1 {
+    background-color: green;
+}
+
+#btn2 {
+    background-color: red;
+}
+
+.checkBtn{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    color: white;
+}
+
+.doneTask{
+    background-color: rgb(82, 184, 82);
+}
