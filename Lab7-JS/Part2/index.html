@@ -31,21 +31,24 @@
         function doneTask(button) {
             let doneTask = button.parentNode.parentNode;
             doneTask.classList.add('doneTask');
+            button.remove();
         }
 
         addBtn.onclick = function () {
-            let task = document.createElement('div');
-            task.className = 'task';
-            
-            task.innerHTML = ` 
-                <div class="name">${inp1.value}</div>
-                <div>
-                    <button id="btn1" onclick="doneTask(this)" class="checkBtn">✓</button>
-                    <button id="btn2" onclick="deleteTask(this)" class="checkBtn">X</button>
-                </div>`
-
-            main.appendChild(task);
-            inp1.value = "";
+            if(inp1.value.trim() !== ''){
+                let task = document.createElement('div');
+                task.className = 'task';
+                
+                task.innerHTML = ` 
+                    <div class="name">${inp1.value}</div>
+                    <div>
+                        <button id="btn1" onclick="doneTask(this)" class="checkBtn">✓</button>
+                        <button id="btn2" onclick="deleteTask(this)" class="checkBtn">X</button>
+                    </div>`
+    
+                main.appendChild(task);
+                inp1.value = "";
+            }
         }
     </script>
 </body>
