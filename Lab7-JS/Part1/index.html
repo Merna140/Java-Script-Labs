@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Login">
+        <input type="text" id="username" placeholder="username">
+        <input type="text" id="password" placeholder="password">
+        <button id="btn">LOGIN</button>
+        <p>Not registered? <a href="">Create an account</a></p>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let enteredUsername = document.getElementById('username');
+        let enteredPassword = document.getElementById('password');
+        let login = {
+            username: '',
+            password: '',
+        };
+        let doneOnce = false;
+
+        function showMessageBox(message, isSuccess) {
+            let loginDiv = document.querySelector('.Login');
+
+            if (isSuccess) {
+                let successDiv = document.createElement('div');
+                successDiv.className = 'Login successDiv';
+                successDiv.innerHTML = message;
+                loginDiv.replaceWith(successDiv);
+            }
+
+            else {
+                if (!doneOnce) {
+                    let failDiv = document.createElement('div');
+                    failDiv.className = 'failDiv';
+                    failDiv.innerHTML = message;
+                    loginDiv.appendChild(failDiv);
+                    doneOnce = true;
+                }
+            }
+        }
+
+
+        btn.onclick = function () {
+            login.username = enteredUsername.value;
+            login.password = enteredPassword.value;
+
+            if (login.username === "admin" && login.password === '123') {
+                showMessageBox("Welcome ^_^", true);
+            }
+            else {
+                showMessageBox("Not Registered !!", false);
+            }
+        }
+    </script>
+</body>
+
+</html>

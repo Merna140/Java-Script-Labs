@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(10, 177, 23);
+}
+
+.Login{
+    width: 400px;
+    height: 320px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+}
+
+.successDiv{
+    background-color: rgb(161, 228, 53);
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.failDiv{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+
+input{
+    width: 75%;
+    padding: 10px;
+    background-color: rgb(236, 225, 225);
+}
+
+button{
+    width: 75%;
+    padding: 10px;
+    color: white;
+    background-color: green;
+}
+
+p{
+    color: rgb(197, 191, 191);
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
