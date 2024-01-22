@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <button type="button" class="arrow"> <img src="Images/left-arrow.png"></button>
+            <div id='main'></div>
+            <button type="button" class="arrow"> <img src="Images/right-arrow.png"></button>
+        </div>
+
+        <div class="slider_pagination">
+            <button class="slider_pagination_btn" id="btn1"></button>
+            <button class="slider_pagination_btn" id="btn2"></button>
+            <button class="slider_pagination_btn" id="btn3"></button>
+        </div>
+
+    </div>
+
+    <script>
+        let buttons = document.querySelectorAll('.arrow');
+        let pageButtons = document.querySelectorAll('.slider_pagination_btn');
+        let myImg = document.createElement('img');
+        let index = 1;
+
+        const imageSources = [
+            'Images/1.png',
+            'Images/2.png',
+            'Images/3.png',
+        ];
+
+        myImg.src = imageSources[index];
+        myImg.classList.add('myImg')
+        document.getElementById("main").appendChild(myImg);
+
+
+        //Left Arrow
+        buttons[0].addEventListener('click', function () {
+            if (index > 0) {
+                index--;
+                myImg.src = imageSources[index];
+            }
+        })
+
+        //Right Arrow
+        buttons[1].addEventListener('click', function () {
+            if (index < 2) {
+                index++;
+                myImg.src = imageSources[index];
+            }
+        })
+
+        pageButtons[0].addEventListener('click', function () {
+            myImg.src = imageSources[0];
+            index = 0;
+        })
+
+        pageButtons[1].addEventListener('click', function () {
+            myImg.src = imageSources[1];
+            index = 1;
+        })
+
+        pageButtons[2].addEventListener('click', function () {
+            myImg.src = imageSources[2];
+            index = 2;
+        })
+
+
+    </script>
+</body>
+
+</html>
