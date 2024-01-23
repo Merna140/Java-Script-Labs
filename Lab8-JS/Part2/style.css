@@ -1,0 +1,31 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+#watch {
+  font-size: 2em;
+}
+
+#alarmInputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#alarmInputs input {
+  width: 40px;
+}
+
+#alarmBtn,
+#clearBtn {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch with Alarm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="watch"></div>
+    <div id="alarmInputs">
+        <input type="number" id="hours" placeholder="HH" min="0" max="23">
+        <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+        <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+    <button id="alarmBtn" onclick="setAlarm()">Set Alarm</button>
+    <button id="clearBtn" onclick="clearAlarm()">Clear Alarm</button>
+
+    <script>
+        var alarmInterval;
+
+        function newClock(clock) {
+
+            while (clock >= 24) {
+                clock -= 24;
+              }
+
+            if (clock == 0)
+                return (12);
+
+            else if (clock == 12)
+                return (12);
+
+            else if (clock >= 1 && clock <= 11)
+                return (clock);
+
+            else
+                return (clock - 12);
+        }
+
+        function updateClock() {
+            var now = new Date();
+            var timeString = now.toLocaleTimeString();
+            document.getElementById("watch").textContent = timeString;
+        }
+
+        function formatSingleDigit(number) {
+            return number < 10 ? '0' + number : number.toString();
+        }
+
+        function getAMPMFrom24HourFormat(hour24) {
+            while (hour24 >= 24) {
+              hour24 -= 24;
+            }
+          
+            return hour24 >= 12 ? 'PM' : 'AM';
+          }
+
+        function setAlarm() {
+            var hours = document.getElementById("hours").value;
+            var minutes = document.getElementById("minutes").value;
+            var seconds = document.getElementById("seconds").value;
+            var currentTime = new Date();
+
+            if (hours === "") {
+                hours = currentTime.getHours();
+                console.log("Hours");
+                console.log(hours);
+            }
+            else {
+                hours = Number(hours) + Number(currentTime.getHours());
+                console.log("Hours");
+                console.log(hours);
+            }
+
+            if (minutes === "") {
+                minutes = currentTime.getMinutes();
+                console.log("Minutes");
+                console.log(minutes);
+            }
+            else {
+                minutes = Number(minutes) + Number(currentTime.getMinutes());
+                console.log("Minutes");
+                console.log(minutes);
+            }
+
+            if (seconds === "") {
+                seconds = currentTime.getSeconds();
+                console.log("Seconds");
+                console.log(seconds);
+            }
+            else {
+                seconds = Number(seconds) + Number(currentTime.getSeconds());
+            }
+
+            if (minutes >= 60) {
+                hours += Math.floor(minutes / 60);
+                minutes %= 60;
+            }
+
+            if (seconds >= 60) {
+                minutes += Math.floor(seconds / 60);
+                seconds %= 60;
+            }
+
+            minutes = formatSingleDigit(minutes);
+            seconds = formatSingleDigit(seconds);
+            let format = getAMPMFrom24HourFormat(hours);
+            hours = newClock(hours);
+
+            let alarmTime = hours + ":" + minutes + ":" + seconds + " " + format;
+
+            console.log(alarmTime);
+
+            alarmInterval = setInterval(function () {
+                updateClock(); // Update the clock every second
+
+                let myTime = new Date();
+                let formattedCurrentTime = myTime.toLocaleTimeString();
+
+                console.log("FormatedTime");
+                console.log(formattedCurrentTime);
+
+
+                if (formattedCurrentTime === alarmTime) {
+                    alert("Alarm! It's " + formattedCurrentTime);
+                    clearInterval(alarmInterval);
+                }
+            }, 1000);
+        }
+
+        function clearAlarm() {
+            clearInterval(alarmInterval);
+            alert("Alarm cleared!");
+        }
+
+        // Initial clock update
+        updateClock();
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+
+</html>
