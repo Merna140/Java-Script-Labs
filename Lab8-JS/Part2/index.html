@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="frame">
         <div class="clock-container">
             <div class="days">
@@ -50,7 +49,7 @@
     <script>
         let alarmInterval;
         let alarmTime;
-        let message="ٍ";
+        let message="";
         let secondPart = document.querySelector('.secondPart');
         let messageDiv = document.createElement('div');
 
@@ -161,17 +160,11 @@
             messageDiv.className = 'messageDiv';
             secondPart.appendChild(messageDiv);
 
-            console.log(alarmTime);
-
             alarmInterval = setInterval(function () {
                 updateClock(); // Update the clock every second
 
                 let myTime = new Date();
                 let formattedCurrentTime = myTime.toLocaleTimeString();
-
-                console.log("FormatedTime");
-                console.log(formattedCurrentTime);
-
 
                 if (formattedCurrentTime === alarmTime) {
                     alert("Alarm! It's " + formattedCurrentTime);
@@ -191,7 +184,6 @@
 
         // Initial clock update
         updateClock();
-
         // Update the clock every second
         setInterval(updateClock, 1000);
     </script>
