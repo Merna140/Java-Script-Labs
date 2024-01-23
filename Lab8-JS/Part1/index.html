@@ -29,6 +29,7 @@
         let pageButtons = document.querySelectorAll('.slider_pagination_btn');
         let myImg = document.createElement('img');
         let index = 1;
+        let intervalId; // To store the interval ID
 
         const imageSources = [
             'Images/1.png',
@@ -40,22 +41,59 @@
         myImg.classList.add('myImg')
         document.getElementById("main").appendChild(myImg);
 
+        startInterval();
 
-        //Left Arrow
-        buttons[0].addEventListener('click', function () {
+        function startInterval() {
+            intervalId = setInterval(nextImg, 1000);
+        }
+
+        function stopInterval() {
+            clearInterval(intervalId);
+        }
+
+        function nextImg() {
+            if (index < 2) {
+                index++;
+            } else {
+                index = 0;
+            }
+            myImg.src = imageSources[index];
+        }
+
+        function prevImg() {
             if (index > 0) {
                 index--;
                 myImg.src = imageSources[index];
             }
-        })
+        }
 
         //Right Arrow
         buttons[1].addEventListener('click', function () {
-            if (index < 2) {
-                index++;
-                myImg.src = imageSources[index];
-            }
+            stopInterval();
+            nextImg();
+            startInterval();
         })
+
+        //Left Arrow
+        buttons[0].addEventListener('click', function () {
+            stopInterval();
+            prevImg();
+            startInterval();
+        })
+
+
+        function goToSlide(event) {
+            index = parseInt(event.target.getAttribute("data-index"));
+            setActiveDot(index);
+        }
+
+        function setActiveDot(currentIndex) {
+            var dots = document.getElementsByClassName("dot");
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            dots[currentIndex].classList.add("active");
+        }
 
         pageButtons[0].addEventListener('click', function () {
             myImg.src = imageSources[0];
@@ -71,7 +109,6 @@
             myImg.src = imageSources[2];
             index = 2;
         })
-
 
     </script>
 </body>

@@ -45,3 +45,22 @@
 .myImg {
     width: 25%;
 }
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #801d1d;
+  }
+
+#slider_pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
