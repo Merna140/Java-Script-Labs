@@ -22,8 +22,6 @@ body {
     text-align: center;
 }
 
-
-
 #watch {
     font-size: 2em;
     margin-top: 10px;
@@ -37,9 +35,9 @@ body {
 }
 
 .days span {
-    font-size: 1em; /* Set the font size to be smaller */
+    font-size: 1em; 
     font-weight: normal;
-    margin: 0 10px; /* Add some margin between the days */
+    margin: 0 10px; 
 }
 
 .title{
