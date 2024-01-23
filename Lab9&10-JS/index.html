@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Login">
+        <p>Registration Form</p>
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="password" placeholder="Password">
+        <button id="btn">Submit</button>
+        <span>Already registered? <a href="">Login</a><span>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let emailInput = document.getElementById('email');
+        let passwordInput = document.getElementById('password');
+        let messageDiv = document.createElement('div');
+        let loginDiv = document.querySelector('.Login');
+        let doneOnce = false;
+
+        function showMessageBox(message, isSuccess) {
+
+            if (!doneOnce) {
+                messageDiv.innerHTML = message;
+                messageDiv.style.width = '75%';
+                if(isSuccess){
+                    messageDiv.className = 'successDiv';
+                }
+                else{
+                    messageDiv.className = 'failDiv';
+                }
+                loginDiv.appendChild(messageDiv);
+                doneOnce = true;
+            }
+        }
+
+
+        btn.onclick = function () {
+            validateForm();
+            if (doneOnce) {
+                //loginDiv.removeChild(messageDiv);
+                doneOnce = false;
+            }
+        }
+
+        function validateForm() {
+            let flag1 = false;
+            let flag2 = false;
+
+            // Validate email
+            if (!emailInput.value.includes('@')) {
+                showMessageBox('Please enter a valid email address.', false);
+                flag1=true;
+            }
+
+            // Validate password
+            let password = passwordInput.value;
+            if (password.length < 8 ||
+                !/[a-z]/.test(password) ||
+                !/[A-Z]/.test(password) ||
+                !/\d/.test(password)) {
+                showMessageBox('Password must contain at least 8 characters, including at least one lowercase letter, one uppercase letter, and one number.', false);
+                flag2=true;
+            }
+
+            // If both email and password are valid, allow form submission
+            if(!flag1&&!flag2){
+                showMessageBox('The Email is registered.', true);
+                emailInput.value = "";
+                passwordInput.value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
