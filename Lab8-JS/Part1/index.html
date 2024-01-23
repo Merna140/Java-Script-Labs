@@ -16,35 +16,43 @@
             <button type="button" class="arrow"> <img src="Images/right-arrow.png"></button>
         </div>
 
-        <div class="slider_pagination">
-            <button class="slider_pagination_btn" id="btn1"></button>
-            <button class="slider_pagination_btn" id="btn2"></button>
-            <button class="slider_pagination_btn" id="btn3"></button>
-        </div>
-
+        <div class="slider_pagination" id="container"> </div>
     </div>
 
     <script>
         let buttons = document.querySelectorAll('.arrow');
-        let pageButtons = document.querySelectorAll('.slider_pagination_btn');
         let myImg = document.createElement('img');
-        let index = 1;
         let intervalId; // To store the interval ID
 
         const imageSources = [
             'Images/1.png',
             'Images/2.png',
             'Images/3.png',
+            'Images/4.png',
+            'Images/5.png',
         ];
 
+        //Create pagination buttons
+        for (let i = 0; i < imageSources.length; i++) {
+            var button = document.createElement('button');
+            button.className = 'slider_pagination_btn buttonEdits';
+            var container = document.getElementById('container');
+            container.appendChild(button);
+        }
+
+        let pageButtons = document.querySelectorAll('.slider_pagination_btn');
+
+        //Set the 1st image to be the middle one
+        let index = Math.floor(imageSources.length / 2);
         myImg.src = imageSources[index];
+        activation(index);
         myImg.classList.add('myImg')
         document.getElementById("main").appendChild(myImg);
 
         startInterval();
 
         function startInterval() {
-            intervalId = setInterval(nextImg, 1000);
+            intervalId = setInterval(nextImg, 2000);
         }
 
         function stopInterval() {
@@ -52,18 +60,20 @@
         }
 
         function nextImg() {
-            if (index < 2) {
+            if (index < imageSources.length - 1) {
                 index++;
             } else {
                 index = 0;
             }
             myImg.src = imageSources[index];
+            activation(index);
         }
 
         function prevImg() {
             if (index > 0) {
                 index--;
                 myImg.src = imageSources[index];
+                activation(index);
             }
         }
 
@@ -81,35 +91,24 @@
             startInterval();
         })
 
+        function activation(myIndex) {
+            pageButtons[myIndex].classList.add('active');
 
-        function goToSlide(event) {
-            index = parseInt(event.target.getAttribute("data-index"));
-            setActiveDot(index);
-        }
-
-        function setActiveDot(currentIndex) {
-            var dots = document.getElementsByClassName("dot");
-            for (var i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
+            // Remove the class from other buttons
+            for (let j = 0; j < pageButtons.length; j++) {
+                if (j !== myIndex) {
+                    pageButtons[j].classList.remove('active');
+                }
             }
-            dots[currentIndex].classList.add("active");
         }
 
-        pageButtons[0].addEventListener('click', function () {
-            myImg.src = imageSources[0];
-            index = 0;
-        })
-
-        pageButtons[1].addEventListener('click', function () {
-            myImg.src = imageSources[1];
-            index = 1;
-        })
-
-        pageButtons[2].addEventListener('click', function () {
-            myImg.src = imageSources[2];
-            index = 2;
-        })
-
+        for (let i = 0; i < imageSources.length; i++) {
+            pageButtons[i].addEventListener('click', function () {
+                myImg.src = imageSources[i];
+                index = i;
+                activation(index);
+            })
+        }
     </script>
 </body>
 

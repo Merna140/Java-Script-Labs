@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 1rem;
 }
 
@@ -46,16 +45,7 @@
     width: 25%;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background-color: #bbb;
-    cursor: pointer;
-  }
-
-  .dot.active {
+.active {
     background-color: #801d1d;
   }
 
@@ -64,3 +54,7 @@
     justify-content: center;
     margin-top: 10px;
   }
+
+.buttonEdits{
+    margin: 5px;
+}
