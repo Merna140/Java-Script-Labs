@@ -10,14 +10,32 @@
 
 <body>
 
-    <div id="watch"></div>
-    <div id="alarmInputs">
-        <input type="number" id="hours" placeholder="HH" min="0" max="23">
-        <input type="number" id="minutes" placeholder="MM" min="0" max="59">
-        <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    <div class="frame">
+        <div class="clock-container">
+            <div class="days">
+                <span class="sun">Sun</span>
+                <span class="mon">Mon</span>
+                <span class="tue">Tue</span>
+                <span class="wed">Wed</span>
+                <span class="thu">Thu</span>
+                <span class="fri">Fri</span>
+                <span class="sat">Sat</span>
+            </div>
+            <div id="watch"></div>
+        </div>
     </div>
-    <button id="alarmBtn" onclick="setAlarm()">Set Alarm</button>
-    <button id="clearBtn" onclick="clearAlarm()">Clear Alarm</button>
+
+    <div class="frame">
+        <div id="alarmInputs">
+            <input type="number" id="hours" placeholder="HH" min="0" max="23">
+            <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+            <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+        </div>
+        <div>
+            <button id="alarmBtn" onclick="setAlarm()">Set Alarm</button>
+            <button id="clearBtn" onclick="clearAlarm()">Clear Alarm</button>
+        </div>
+    </div>
 
     <script>
         var alarmInterval;
@@ -26,7 +44,7 @@
 
             while (clock >= 24) {
                 clock -= 24;
-              }
+            }
 
             if (clock == 0)
                 return (12);
@@ -43,8 +61,19 @@
 
         function updateClock() {
             var now = new Date();
+            var day = now.toLocaleDateString('en-US', { weekday: 'short' }).toLowerCase();
             var timeString = now.toLocaleTimeString();
             document.getElementById("watch").textContent = timeString;
+
+            // Highlight today's day
+            document.querySelectorAll('.days span').forEach(span => {
+                span.style.fontWeight = 'normal';
+            });
+
+            var todayElement = document.querySelector(`.days span.${day}`);
+            if (todayElement) {
+                todayElement.style.fontWeight = 'bold';
+            }
         }
 
         function formatSingleDigit(number) {
@@ -53,11 +82,11 @@
 
         function getAMPMFrom24HourFormat(hour24) {
             while (hour24 >= 24) {
-              hour24 -= 24;
+                hour24 -= 24;
             }
-          
+
             return hour24 >= 12 ? 'PM' : 'AM';
-          }
+        }
 
         function setAlarm() {
             var hours = document.getElementById("hours").value;

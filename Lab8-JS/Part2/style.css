@@ -1,31 +1,95 @@
 body {
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-color: #f0f0f0;
 }
 
+.clock-container {
+    text-align: center;
+}
+
+.frame {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+}
+
+
+
 #watch {
-  font-size: 2em;
+    font-size: 2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.days span {
+    font-size: 1em; /* Set the font size to be smaller */
+    font-weight: normal;
+    margin: 0 10px; /* Add some margin between the days */
 }
 
 #alarmInputs {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
 }
 
 #alarmInputs input {
-  width: 40px;
+    width: 40px;
+    padding: 5px;
+    font-size: 1em;
 }
 
 #alarmBtn,
 #clearBtn {
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 1em;
-  cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
 }
+
+#clearBtn {
+    background-color: #f44336;
+}
+
+#alarmBtn:hover,
+#clearBtn:hover {
+    background-color: #45a049;
+}
+
+/* Optional: Add some additional styling for better visual appeal */
+#alarmInputs {
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
