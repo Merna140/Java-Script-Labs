@@ -18,7 +18,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
-    width: 25%;
+    width: 400px;
     text-align: center;
 }
 
@@ -42,18 +42,31 @@ body {
     margin: 0 10px; /* Add some margin between the days */
 }
 
-#alarmInputs {
-    margin-top: 10px;
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.alarmInputs {
     display: flex;
-    justify-self: center;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
-#alarmInputs input {
+.alarmInputField{
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(184, 178, 178);
+}
+
+input {
     width: 40px;
     padding: 5px;
     font-size: 1em;
+}
+
+.buttonsDiv{
+    padding: 10px;
 }
 
 #alarmBtn,
@@ -75,11 +88,6 @@ body {
 #alarmBtn:hover,
 #clearBtn:hover {
     background-color: #45a049;
-}
-
-/* Optional: Add some additional styling for better visual appeal */
-#alarmInputs {
-    margin-bottom: 20px;
 }
 
 button {

@@ -25,20 +25,34 @@
         </div>
     </div>
 
-    <div class="frame">
-        <div id="alarmInputs">
-            <input type="number" id="hours" placeholder="HH" min="0" max="23">
-            <input type="number" id="minutes" placeholder="MM" min="0" max="59">
-            <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    <div class="frame secondPart">
+        <p class="title">SET ALARM AFTER</p>
+        <div class="alarmInputs">
+            <div class="alarmInputField">
+                <p>HOURS</p>
+                <input type="number" id="hours" placeholder="0" min="0" max="23">
+            </div>
+            <div class="alarmInputField">
+                <p>MINUTES</p>
+                <input type="number" id="minutes" placeholder="0" min="0" max="59">
+            </div>
+            <div class="alarmInputField">
+                <p>SECONDS</p>
+                <input type="number" id="seconds" placeholder="0" min="0" max="59">
+            </div>
         </div>
-        <div>
+        <div class="buttonsDiv">
             <button id="alarmBtn" onclick="setAlarm()">Set Alarm</button>
             <button id="clearBtn" onclick="clearAlarm()">Clear Alarm</button>
         </div>
     </div>
 
     <script>
-        var alarmInterval;
+        let alarmInterval;
+        let alarmTime;
+        let message="ٍ";
+        let secondPart = document.querySelector('.secondPart');
+        let messageDiv = document.createElement('div');
 
         function newClock(clock) {
 
@@ -140,7 +154,12 @@
             let format = getAMPMFrom24HourFormat(hours);
             hours = newClock(hours);
 
-            let alarmTime = hours + ":" + minutes + ":" + seconds + " " + format;
+            alarmTime = hours + ":" + minutes + ":" + seconds + " " + format;
+
+            message = "Set Alarm for " + alarmTime;
+            messageDiv.innerHTML = message;
+            messageDiv.className = 'messageDiv';
+            secondPart.appendChild(messageDiv);
 
             console.log(alarmTime);
 
@@ -156,14 +175,18 @@
 
                 if (formattedCurrentTime === alarmTime) {
                     alert("Alarm! It's " + formattedCurrentTime);
-                    clearInterval(alarmInterval);
+                    clearAlarm(alarmInterval);
                 }
             }, 1000);
         }
 
         function clearAlarm() {
             clearInterval(alarmInterval);
-            alert("Alarm cleared!");
+            messageDiv.innerHTML = "";
+            secondPart.appendChild(messageDiv);
+            hours.value="";
+            minutes.value="";
+            seconds.value="";
         }
 
         // Initial clock update
