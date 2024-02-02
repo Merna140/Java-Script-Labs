@@ -177,6 +177,9 @@ don’t use alert or prompt , use dom to get the data from user and display it
 
 ![Lab 7](./assets/images/Lab7_1.PNG)
 
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part1/index.html)
+
 
 **Second Part:**
 Show a message to tell the user that it’s the first release of a calculator that only has a summation feature.
