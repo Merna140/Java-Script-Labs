@@ -164,7 +164,7 @@ Testing inheritance by using class Square that inherits from class Shape and
 static fields by class SquaredTriple that inherits from class Tripler and overriden functions in both cases.
 
 <!-- Lab7 -->
-### Lab 1: Simple trail using prompt and alert
+### Lab 7: Login Page and ToDo List
 
 **Description:**
 The lab is divide in to two parts
@@ -190,6 +190,37 @@ When user click the delete button , the task should be deleted from list
 
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part2/index.html)
+
+
+<!-- Lab8 -->
+### Lab 8: Login Page and ToDo List
+
+**Description:**
+The lab is divide in to two parts
+
+**First Part:**
+Image Slider similar to the next image.
+When user press the next button the next image should take the place of the 
+current image and current image take the place of the previous image.
+
+![Lab 8_1](./assets/images/Lab8_1.PNG)
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab8-JS/Part1/index.html)
+
+**Second Part:**
+Digital watch with alarm option using alert dialog 
+box to alarm the user instead of sound.
+
+![Lab 8_2](./assets/images/Lab8_2.PNG)
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab8-JS/Part2/index.html)
+
+
+
+
+
 
 
 
