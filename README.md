@@ -9,7 +9,7 @@ Welcome to the JavaScript Labs repository! This repository contains a series of 
 
 **Description:**
 The lab is divide in to two parts
-First Part:
+**First Part:**
 Ask the user to enter his first name
 Ask the user to enter his last name
 Confirm the full name.
@@ -17,7 +17,7 @@ Ask the user to enter his birth year.
 Welcome the user using his full name and age.
 (Ex: Welcome Merna Gamal you are 25 years old)
 
-Second Part
+**Second Part**
 Show a message to tell the user that it’s the first release of a calculator that only has a summation feature.
 Ask the user to enter the first number
 Ask the user to enter second number
