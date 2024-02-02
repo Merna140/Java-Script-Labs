@@ -106,7 +106,7 @@ Then show the user the full details of that contact,
 Then ask him for new operation and repeat.
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab3-JS/Part2/index.html)
+[Phone book Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab3-JS/Part2/index.html)
 
 **Third Part:**
 EX 1:
