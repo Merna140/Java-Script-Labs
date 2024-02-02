@@ -175,20 +175,21 @@ the data and if username = admin and password = 123 show him message
 “welcome” , else show him message “not registered”
 don’t use alert or prompt , use dom to get the data from user and display it
 
-![Lab 7](./assets/images/Lab7_1.PNG)
+![Lab 7_1](./assets/images/Lab7_1.PNG)
 
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part1/index.html)
 
-
 **Second Part:**
-Show a message to tell the user that it’s the first release of a calculator that only has a summation feature.
-Ask the user to enter the first number
-Ask the user to enter second number
-Show the summation result (ex: 30 + 6 = 36)
+Todo list app, 
+when user write task name and press add new task will be added to tasks list
+When user click the done mark in green the task status will be updated to done 
+When user click the delete button , the task should be deleted from list
+
+![Lab 7_2](./assets/images/Lab7_2.PNG)
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part2/index.html)
 
 
 
