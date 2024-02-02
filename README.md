@@ -28,11 +28,6 @@ Show the summation result (ex: 30 + 6 = 36)
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
 
-
-# JavaScript Labs Repository
-
-Welcome to the JavaScript Labs repository! This repository contains a series of JavaScript labs that cover various concepts and skills. Each lab is designed to help you practice and enhance your JavaScript programming abilities.
-
 <!-- Lab2 -->
 ### Lab 2: Simple trail using prompt and alert
 <!-- ![Lab 1](./images/lab1.png) -->
