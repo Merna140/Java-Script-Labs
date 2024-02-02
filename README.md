@@ -156,11 +156,36 @@ Office:
 **Second Part:**
  Report: Inheritance in function constructor.
 
+<!-- Lab6 -->
 ### Lab 6: Testing Inheritance, Override and static fields
 
 **Description:**
 Testing inheritance by using class Square that inherits from class Shape and 
 static fields by class SquaredTriple that inherits from class Tripler and overriden functions in both cases.
+
+<!-- Lab7 -->
+### Lab 1: Simple trail using prompt and alert
+
+**Description:**
+The lab is divide in to two parts
+
+**First Part:**
+Create login page and when user press login button create object login that hold 
+the data and if username = admin and password = 123 show him message 
+“welcome” , else show him message “not registered”
+don’t use alert or prompt , use dom to get the data from user and display it
+
+![Lab 7](./assets/images/Lab7_1.png)
+
+
+**Second Part:**
+Show a message to tell the user that it’s the first release of a calculator that only has a summation feature.
+Ask the user to enter the first number
+Ask the user to enter second number
+Show the summation result (ex: 30 + 6 = 36)
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
 
 
 
