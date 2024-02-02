@@ -51,9 +51,9 @@ Ask the user to enter a string
 **Third Part:**
 Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm based on its value.
  Examples 
-0 -> 12AM
- 11 -> 11AM
+0 -> 12AM,
+ 11 -> 11AM,
  13 -> 1PM 
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/Index.html)
