@@ -66,6 +66,7 @@ Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm 
 The lab is divide in to three parts
 
 **First Part:**
+
 lab1: User will enter his Username , Password 
 If username = “admin” and password = “421$$” 
 Show him message “Welcome login success”
@@ -77,6 +78,7 @@ User will enter first number
 Then enter an operation (sum,multi,subtract,division,moduls)
 Then enter second number
 Then do the operation and show the result to user
+
 User will be able to use the last result to do new operation on it
 As example user enter 1 then sum then 3 then show 4 then sum then 5 then show 
 9 and so on
