@@ -56,4 +56,4 @@ Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm 
  13 -> 1PM 
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/Index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/index.html)
