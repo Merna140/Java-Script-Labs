@@ -187,7 +187,6 @@ When user click the delete button , the task should be deleted from list
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part2/index.html)
 
-
 <!-- Lab8 -->
 ### Lab 8: Image Slider and Digital watch with alarm 
 
