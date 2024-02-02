@@ -26,13 +26,4 @@ Show the summation result (ex: 30 + 6 = 36)
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
 
-### Lab 2: Title of Lab 2
-![Lab 2](./images/lab2.png)
-
-**Description:**
-Briefly describe the purpose and goals of this lab. What concepts or skills will the user learn by completing this lab?
-
-**Demo:**
-Provide a link to a live demo or include code snippets that showcase the expected output of this lab.
-
 
