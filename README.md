@@ -6,7 +6,6 @@ Welcome to the JavaScript Labs repository! This repository contains a series of 
 
 <!-- Lab1 -->
 ### Lab 1: Simple trail using prompt and alert
-<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 The lab is divide in to two parts
@@ -30,7 +29,6 @@ Show the summation result (ex: 30 + 6 = 36)
 
 <!-- Lab2 -->
 ### Lab 2: Age validation, Vowels counter and 24 hour clock to 12 Conventer
-<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 The lab is divide in to three parts
@@ -60,7 +58,6 @@ Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm 
 
 <!-- Lab3 -->
 ### Lab 3: Simple Login, Calc and Phone book
-<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 The lab is divide in to three parts
@@ -118,7 +115,6 @@ Write a nested function and explain the closure -> lexical environment.
 
 <!-- Lab4 -->
 ### Lab 4: Implementing Constructor functions, Classes, Objects Linking to Other Objects (OLOO), Factory functions
-<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 
