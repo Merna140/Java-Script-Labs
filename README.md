@@ -134,6 +134,30 @@ Eat(meals): (3 meals -> 100 health rate, 2 meals -> 75 health rate, 1 meal-> 50 
 
 Buy(items): (1 item -> decrees Money 10 LE)	
 	
+<!-- Lab5 -->
+### Lab 5: Testing Employee Class
+<!-- ![Lab 1](./images/lab1.png) -->
+
+**Description:**
+The lab is two parts
+
+**First Part:**
+Setup the following class 
+	Employee (is a person class) 
+-	Attributes (id, email, workMood, salary, isManager)
+-	Methods (work)
+
+Office:
+-	Attributes (name, employees)
+-	Methods (getAllEmployees, getEmployee, fire,hire)
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab5-JS/Part1/index.html)
+
+**Second Part:**
+ Report: Inheritance in function constructor.
+
+
 
 
 
