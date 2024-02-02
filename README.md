@@ -136,7 +136,6 @@ Buy(items): (1 item -> decrees Money 10 LE)
 	
 <!-- Lab5 -->
 ### Lab 5: Testing Employee Class
-<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 The lab is two parts
@@ -157,6 +156,11 @@ Office:
 **Second Part:**
  Report: Inheritance in function constructor.
 
+### Lab 6: Testing Inheritance, Override and static fields
+
+**Description:**
+Testing inheritance by using class Square that inherits from class Shape and 
+static fields by class SquaredTriple that inherits from class Tripler and overriden functions in both cases.
 
 
 
