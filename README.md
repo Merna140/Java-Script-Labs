@@ -213,6 +213,17 @@ box to alarm the user instead of sound.
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab8-JS/Part2/index.html)
 
+<!-- Lab9&10 -->
+### Lab 9&10: Simple Email and Password Validation Form
+
+**Description:**
+Email must contain @ symbol and Password must contain at least 8 characters, including at least one lowercase letter, one uppercase letter, and one number.
+
+![Lab 9&10](./assets/images/Lab9&10.PNG)
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab9&10-JS/index.html)
+
 
 
 
