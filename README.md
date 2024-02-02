@@ -59,7 +59,7 @@ Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm 
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/index.html)
 
 <!-- Lab3 -->
-### Lab 3: Age validation, Vowels counter and 24 hour clock to 12 Conventer
+### Lab 3: Simple Login, Calc and Phone book
 <!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
@@ -67,7 +67,7 @@ The lab is divide in to three parts
 
 **First Part:**
 
-**lab1:** User will enter his Username , Password 
+**lab1 (Login):** User will enter his Username , Password 
 If username = “admin” and password = “421$$” 
 Show him message “Welcome login success”
 If he entered incorrect username or password
@@ -82,6 +82,9 @@ Then do the operation and show the result to user
 User will be able to use the last result to do new operation on it
 As example user enter 1 then sum then 3 then show 4 then sum then 5 then show 
 9 and so on
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab3-JS/Part1/index.html)
 
 **Second Part:**
 
@@ -103,4 +106,13 @@ Then show the user the full details of that contact,
 Then ask him for new operation and repeat.
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab3-JS/Part2/index.html)
+
+**Third Part:**
+EX 1:
+Use 10 of Objects predefined methods and explanation.
+Ex 2 :
+Use 10 of Arrays predefined methods and explanation.
+Ex3:
+Write a nested function and explain the closure -> lexical environment.
+
