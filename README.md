@@ -29,7 +29,7 @@ Show the summation result (ex: 30 + 6 = 36)
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
 
 <!-- Lab2 -->
-### Lab 2: Simple trail using prompt and alert
+### Lab 2: Age validation, Vowels counter and 24 hour clock to 12 Conventer
 <!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
