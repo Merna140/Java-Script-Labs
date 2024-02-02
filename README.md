@@ -5,7 +5,7 @@ Welcome to the JavaScript Labs repository! This repository contains a series of 
 ## Labs Overview
 
 ### Lab 1: Simple trail using prompt and alert
-![Lab 1](./images/lab1.png)
+<!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
 The lab is divide in to two parts
