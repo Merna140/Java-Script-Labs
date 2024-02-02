@@ -67,13 +67,13 @@ The lab is divide in to three parts
 
 **First Part:**
 
-lab1: User will enter his Username , Password 
+**lab1:** User will enter his Username , Password 
 If username = “admin” and password = “421$$” 
 Show him message “Welcome login success”
 If he entered incorrect username or password
 Tell him which data entered wrong
 
-lab2 (Calc): 
+**lab2 (Calc):** 
 User will enter first number
 Then enter an operation (sum,multi,subtract,division,moduls)
 Then enter second number
