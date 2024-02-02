@@ -1,6 +1,6 @@
 # JavaScript Labs Repository
 
-Welcome to the JavaScript Labs repository! This repository contains a series of JavaScript labs that cover various concepts and skills. Each lab is designed to help you practice and enhance your JavaScript programming abilities.
+Welcome to the JavaScript Labs repository! This repository contains a series of JavaScript labs that cover various concepts and skills. Each lab is designed to help practice and enhance my JavaScript programming abilities.
 
 ## Labs Overview
 
