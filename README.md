@@ -175,7 +175,7 @@ the data and if username = admin and password = 123 show him message
 “welcome” , else show him message “not registered”
 don’t use alert or prompt , use dom to get the data from user and display it
 
-![Lab 7](./assets/images/Lab7_1.PNG)
+![Lab 7](./assets/images/Lab7-1.PNG)
 
 
 **Second Part:**
