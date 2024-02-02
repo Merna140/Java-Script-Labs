@@ -116,3 +116,28 @@ Use 10 of Arrays predefined methods and explanation.
 Ex3:
 Write a nested function and explain the closure -> lexical environment.
 
+<!-- Lab4 -->
+### Lab 4: Testing Constructor functions, Classes, Objects Linking to Other Objects (OLOO), Factory functions
+<!-- ![Lab 1](./images/lab1.png) -->
+
+**Description:**
+Person:
+-	Attributes (full name, money, sleep mood, health Rate)
+-	Methods (sleep, eat, buy)
+
+Implement Person methods:
+	Sleep(hours): 
+(7-> happy, 
+< 7 -> tired,
+ >7 ->lazy)
+	Eat(meals): (3 meals -> 100 health rate, 
+		         2 meals -> 75 health rate, 1 meal-> 50 health rate)
+	Buy(items): (1 item -> decrees Money 10 LE)	
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab4-JS/index.html)
+
+
+
+
+
