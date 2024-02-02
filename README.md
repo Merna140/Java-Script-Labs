@@ -193,7 +193,7 @@ When user click the delete button , the task should be deleted from list
 
 
 <!-- Lab8 -->
-### Lab 8: Login Page and ToDo List
+### Lab 8: Image Slider and Digital watch with alarm 
 
 **Description:**
 The lab is divide in to two parts
