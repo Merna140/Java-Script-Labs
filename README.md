@@ -127,9 +127,10 @@ Person:
 -	Methods (sleep, eat, buy)
 
 Implement Person methods:
-	Sleep(hours): (7-> happy, < 7 -> tired,>7 ->lazy),  
 
-	Eat(meals): (3 meals -> 100 health rate, 2 meals -> 75 health rate, 1 meal-> 50 health rate),
+	Sleep(hours): (7-> happy, < 7 -> tired,>7 ->lazy)
+
+	Eat(meals): (3 meals -> 100 health rate, 2 meals -> 75 health rate, 1 meal-> 50 health rate)
     
 	Buy(items): (1 item -> decrees Money 10 LE)	
 
