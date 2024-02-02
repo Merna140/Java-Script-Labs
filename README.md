@@ -212,7 +212,7 @@ current image and current image take the place of the previous image.
 Digital watch with alarm option using alert dialog 
 box to alarm the user instead of sound.
 
-![Lab 8_2](./assets/images/Lab8.PNG)
+![Lab 8_2](./assets/images/Lab8_2.PNG)
 
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab8-JS/Part2/index.html)
