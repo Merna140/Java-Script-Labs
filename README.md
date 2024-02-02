@@ -117,7 +117,7 @@ Ex3:
 Write a nested function and explain the closure -> lexical environment.
 
 <!-- Lab4 -->
-### Lab 4: Testing Constructor functions, Classes, Objects Linking to Other Objects (OLOO), Factory functions
+### Lab 4: Implementing Constructor functions, Classes, Objects Linking to Other Objects (OLOO), Factory functions
 <!-- ![Lab 1](./images/lab1.png) -->
 
 **Description:**
@@ -133,9 +133,6 @@ Implement Person methods:
 	Eat(meals): (3 meals -> 100 health rate, 
 		         2 meals -> 75 health rate, 1 meal-> 50 health rate)
 	Buy(items): (1 item -> decrees Money 10 LE)	
-
-**Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab4-JS/index.html)
 
 
 
