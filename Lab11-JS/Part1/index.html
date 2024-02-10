@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="userContainer">
+    
+</div>
+
+<script>
+    async function fetchUserData() {
+        try {
+            // Fetch data from the specified URL
+            const response = await fetch('https://dummyjson.com/users');
+            const data = await response.json();
+
+            // Check if the data contains users
+            if (data && data.users && data.users.length > 0) {
+                // Display user data
+                displayUserData(data.users);
+            } else {
+                console.error('No user data found.');
+            }
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+        }
+    }
+
+    function displayUserData(users) {
+        var userContainer = document.getElementById('userContainer');
+
+        users.forEach(user => {
+            var userDiv = document.createElement('div');
+            userDiv.innerHTML = `
+                <h1>User: ${user.id}</h1>
+                <img src="${user.image}" alt="User Image">
+                <h2>Email: ${user.email}</h2>
+                <hr>
+            `;
+            userContainer.appendChild(userDiv);
+        });
+    }
+
+     // Add event listener for page load
+     document.addEventListener('DOMContentLoaded', fetchUserData);
+</script>
+</body>
+</html>

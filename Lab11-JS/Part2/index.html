@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p class="title">ToDo List ^_^</p>
+    <div class="main"> </div>
+
+    <div class="taskManagement">
+        <h2>Task</h2>
+        <input type="text" id="inp1" placeholder="Task name">
+        <button id="addBtn">Add</button>
+    </div>
+
+    <script>
+        let main = document.querySelector('.main');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            loadTasks();
+        });
+
+        function deleteTask(button) {
+            let taskToDelete = button.parentNode.parentNode;
+            taskToDelete.remove();
+            saveTasks();
+        }
+
+        function doneTask(button) {
+            let doneTask = button.parentNode.parentNode;
+            doneTask.classList.add('doneTask');
+            button.remove();
+            saveTasks();
+        }
+
+        addBtn.onclick = function () {
+          addTask();
+        }
+
+        function addTask(){
+            const taskInput = document.getElementById("inp1");
+
+            if(taskInput.value.trim() !== ''){
+                let task = document.createElement('div');
+                task.className = 'task';
+                
+                task.innerHTML = ` 
+                    <div class="name">${inp1.value}</div>
+                    <div>
+                        <button id="btn1" onclick="doneTask(this)" class="checkBtn">✓</button>
+                        <button id="btn2" onclick="deleteTask(this)" class="checkBtn">X</button>
+                    </div>`
+    
+                main.appendChild(task);
+                saveTasks();
+                inp1.value = "";
+                
+            }
+        }
+
+        function saveTasks() {
+            const tasks = [];
+    
+             main.querySelectorAll(".task").forEach(task => {
+                let myName = task.querySelector(".name");
+                let myState;
+
+                if (task.classList.contains('doneTask')) {
+                    myState = true;
+                } else {
+                    myState = false;
+                }
+                
+                const myTask = {
+                    name: myName.textContent,
+                    state: myState
+                };
+                tasks.push(myTask);
+            });
+    
+            // Save tasks to local storage
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+
+
+        function loadTasks() {
+            const storedTasks = localStorage.getItem("tasks");
+    
+            if (storedTasks) {
+                const tasks = JSON.parse(storedTasks);
+                // Populate the task list with stored tasks
+                tasks.forEach(listTask => {
+                    let task = document.createElement('div');
+                    task.className = 'task';
+                    if(listTask.state==true){
+                        task.innerHTML = ` 
+                        <div class="name">${listTask.name}</div>
+                        <div>
+                            <button id="btn2" onclick="deleteTask(this)" class="checkBtn">X</button>
+                        </div>`
+                        task.classList.add('doneTask');
+                    }
+                    else{
+                        task.innerHTML = ` 
+                      <div class="name">${listTask.name}</div>
+                      <div>
+                          <button id="btn1" onclick="doneTask(this)" class="checkBtn">✓</button>
+                          <button id="btn2" onclick="deleteTask(this)" class="checkBtn">X</button>
+                      </div>`
+                    }
+                    
+                  main.appendChild(task);
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
