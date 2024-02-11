@@ -235,13 +235,13 @@ Display users data (image, email) in html page, you should fetch the data from t
 url https://dummyjson.com/users and the data should be fetched on page load.
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab11-JS/Part1/index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab_11_JS/Part1/index.html)
 
 **Second Part:**
 Update the todo list of lab to allow it to save the tasks to local storage.
 
 **Demo:**
-[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab11-JS/Part2/index.html)
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab_11_JS/Part2/index.html)
 
 
 
