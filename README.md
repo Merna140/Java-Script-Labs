@@ -224,6 +224,26 @@ Email must contain @ symbol and Password must contain at least 8 characters, inc
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab9&10-JS/index.html)
 
 
+<!-- Lab11 -->
+### Lab 11: Image Slider and Digital watch with alarm 
+
+**Description:**
+The lab is divide in to two parts
+
+**First Part:**
+Display users data (image, email) in html page, you should fetch the data from this 
+url https://dummyjson.com/users and the data should be fetched on page load.
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab11-JS/Part1/index.html)
+
+**Second Part:**
+Update the todo list of lab to allow it to save the tasks to local storage.
+
+**Demo:**
+[Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab11-JS/Part2/index.html)
+
+
 
 
 
