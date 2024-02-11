@@ -225,7 +225,7 @@ Email must contain @ symbol and Password must contain at least 8 characters, inc
 
 
 <!-- Lab11 -->
-### Lab 11: Image Slider and Digital watch with alarm 
+### Lab 11: Fetching JSON Data and Storing todo list tasks on the local storage
 
 **Description:**
 The lab is divide in to two parts
