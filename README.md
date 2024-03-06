@@ -223,6 +223,7 @@ Email must contain @ symbol and Password must contain at least 8 characters, inc
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab9&10-JS/index.html)
 
+---
 
 <!-- Lab11 -->
 ### Lab 11: Fetching JSON Data and Storing todo list tasks on the local storage
