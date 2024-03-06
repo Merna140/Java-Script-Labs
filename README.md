@@ -27,6 +27,8 @@ Show the summation result (ex: 30 + 6 = 36)
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab1-JS/Index.html)
 
+---
+
 <!-- Lab2 -->
 ### Lab 2: Age validation, Vowels counter and 24 hour clock to 12 Conventer
 
@@ -55,6 +57,8 @@ Write a JavaScript program to convert the 24 hour clock to 12 , adding am or pm 
 
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab2-JS/index.html)
+
+---
 
 <!-- Lab3 -->
 ### Lab 3: Simple Login, Calc and Phone book
@@ -113,6 +117,8 @@ Use 10 of Arrays predefined methods and explanation.
 Ex3:
 Write a nested function and explain the closure -> lexical environment.
 
+---
+
 <!-- Lab4 -->
 ### Lab 4: Implementing Constructor functions, Classes, Objects Linking to Other Objects (OLOO), Factory functions
 
@@ -130,6 +136,8 @@ Eat(meals): (3 meals -> 100 health rate, 2 meals -> 75 health rate, 1 meal-> 50 
 
 Buy(items): (1 item -> decrees Money 10 LE)	
 	
+---
+
 <!-- Lab5 -->
 ### Lab 5: Testing Employee Class
 
@@ -152,12 +160,16 @@ Office:
 **Second Part:**
  Report: Inheritance in function constructor.
 
+---
+
 <!-- Lab6 -->
 ### Lab 6: Testing Inheritance, Override and static fields
 
 **Description:**
 Testing inheritance by using class Square that inherits from class Shape and 
 static fields by class SquaredTriple that inherits from class Tripler and overriden functions in both cases.
+
+---
 
 <!-- Lab7 -->
 ### Lab 7: Login Page and ToDo List
@@ -187,6 +199,8 @@ When user click the delete button , the task should be deleted from list
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab7-JS/Part2/index.html)
 
+---
+
 <!-- Lab8 -->
 ### Lab 8: Image Slider and Digital watch with alarm 
 
@@ -211,6 +225,8 @@ box to alarm the user instead of sound.
 
 **Demo:**
 [Live Demo](https://mernagamalshenouda.github.io/JavaScript-Labs/Lab8-JS/Part2/index.html)
+
+---
 
 <!-- Lab9&10 -->
 ### Lab 9&10: Simple Email and Password Validation Form
